@@ -1,17 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header :headerSvgDrawAttrs=headerSvgDrawAttrs />
+  <SearchContainer />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import Header from "./components/Header.vue";
+import SearchContainer from "./components/SearchContainer.vue";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const headerSvgDrawAttrs = [
+  "M18.215 44.669c-4.73-23.9-.248-39.583-.248-39.583s-1.2 9.547 8.227 24.935c-.12 19.076 3.555 29.027 3.555 29.027l.756-.568-.756.672S24.16 54.491 18.215 44.67zM40.497 41.285c2.261 2.328 4.371 3.939 5.896 4.705a3.373 3.373 0 01-.027-.014s1.712.627 2.014.209c2.087-2.258 2.598-6.465 1.207-14.372-7.957-4.641-8.961-11.877-8.961-11.877s-1.433 10.045-.129 21.349z",
+  "M17.966 5.086s-6.545 22.902 4.532 55.53c.302.942 0 1.987-.805 2.615L10.01 71.597c-1.108.837-2.72.314-3.223-1.046-3.122-8.68-11.682-37.438-3.021-68.916C4.17.38 5.479-.352 6.687.17l11.28 4.915z",
+  "M40.324 51.1l-10.575 7.948s-5.64-15.269-2.719-44.236c.202-1.674 1.914-2.51 3.324-1.674l10.272 6.798s-2.014 14.118.906 27.713c.302 1.36-.201 2.719-1.208 3.45zM59.86 33.426l-9.768-6.588c-.604-.418-1.51.21-1.31.941 2.317 10.562 2.015 15.791-.402 18.406-.302.418-2.014-.21-2.014-.21 1.611.837 2.014.419 2.014.419 1.611-1.255 7.654-5.752 11.48-8.47 1.511-1.151 1.511-3.452 0-4.498z"
+];
 </script>
 
 <style>
@@ -19,8 +19,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 1.5rem;
 }
 </style>
